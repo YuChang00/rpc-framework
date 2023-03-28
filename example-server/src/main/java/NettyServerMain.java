@@ -1,17 +1,16 @@
-import github.javaguide.HelloService;
-import github.javaguide.annotation.RpcScan;
-import github.javaguide.config.RpcServiceConfig;
-import github.javaguide.remoting.transport.netty.server.NettyRpcServer;
-import github.javaguide.serviceimpl.HelloServiceImpl2;
+import com.yuchang.HelloService;
+import com.yuchang.annotation.RpcScan;
+import com.yuchang.config.RpcServiceConfig;
+import com.yuchang.remoting.transport.netty.server.NettyRpcServer;
+import com.yuchang.serviceimpl.HelloServiceImpl2;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * Server: Automatic registration service via @RpcService annotation
+ * Server: 通过@RpcService注释自动注册服务
  *
- * @author shuang.kou
- * @createTime 2020年05月10日 07:25:00
+ * @author yuchang
  */
-@RpcScan(basePackage = {"github.javaguide"})
+@RpcScan(basePackage = {"com.yuchang"})
 public class NettyServerMain {
     public static void main(String[] args) {
         // Register service via annotation

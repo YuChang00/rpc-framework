@@ -91,7 +91,7 @@
 
 ### 导入项目
 
-fork 项目到自己的仓库，然后克隆项目到自己的本地：`git clone git@github.com:username/guide-rpc-framework.git`，使用 IDEA 打开，等待项目初始化完成。
+fork 项目到自己的仓库，然后克隆项目到自己的本地：`git clone git@com.com:username/guide-rpc-framework.git`，使用 IDEA 打开，等待项目初始化完成。
 
 ### 初始化 git hooks
 
@@ -183,7 +183,7 @@ public class HelloServiceImpl2 implements HelloService {
  * @author shuang.kou
  * @createTime 2020年05月10日 07:25:00
  */
-@RpcScan(basePackage = {"github.javaguide.serviceimpl"})
+@RpcScan(basePackage = {"com.yuchang.serviceimpl"})
 public class NettyServerMain {
     public static void main(String[] args) {
         // Register service via annotation

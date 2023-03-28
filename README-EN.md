@@ -50,7 +50,7 @@ As a leader in the field of RPC framework [Dubbo](https://github.com/apache/dubb
 
 ### Import the project
 
-Fork the project to your own repository, then clone the project to its own locale: `git clone git@github.com:username/guide-rpc-framework.git`  use java IDE such as IDEA to open and wait for the project initialization to complete.
+Fork the project to your own repository, then clone the project to its own locale: `git clone git@com.com:username/guide-rpc-framework.git`  use java IDE such as IDEA to open and wait for the project initialization to complete.
 
 ### Initialize git hooks
 
@@ -142,7 +142,7 @@ Publish services (transport using Netty) :
  * @author shuang.kou
  * @createTime 2020年05月10日 07:25:00
  */
-@RpcScan(basePackage = {"github.javaguide.serviceimpl"})
+@RpcScan(basePackage = {"com.yuchang.serviceimpl"})
 public class NettyServerMain {
     public static void main(String[] args) {
         // Register service via annotation

@@ -110,11 +110,11 @@ public @interface RpcService {
 被我们使用 `RpcService`注解的类也算是 Spring Bean，所以，我们可以在`postProcessBeforeInitialization()`方法中去判断类上是否有`RpcService` 注解，如果有的话，就取出 `group` 和 `version` 的值。然后，再调用 `ServiceProvider` 的 `publishService()` 方法发布服务即可！
 
 ```java
-import github.javaguide.annotation.RpcService;
-import github.javaguide.config.RpcServiceConfig;
-import github.javaguide.factory.SingletonFactory;
-import github.javaguide.provider.ServiceProvider;
-import github.javaguide.provider.impl.ZkServiceProviderImpl;
+import com.yuchang.annotation.RpcService;
+import com.yuchang.config.RpcServiceConfig;
+import com.yuchang.factory.SingletonFactory;
+import com.yuchang.provider.ServiceProvider;
+import com.yuchang.provider.impl.ZkServiceProviderImpl;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;

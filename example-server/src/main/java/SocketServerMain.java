@@ -1,11 +1,10 @@
-import github.javaguide.HelloService;
-import github.javaguide.config.RpcServiceConfig;
-import github.javaguide.remoting.transport.socket.SocketRpcServer;
-import github.javaguide.serviceimpl.HelloServiceImpl;
+import com.yuchang.HelloService;
+import com.yuchang.config.RpcServiceConfig;
+import com.yuchang.remoting.transport.socket.SocketRpcServer;
+import com.yuchang.serviceimpl.HelloServiceImpl;
 
 /**
- * @author shuang.kou
- * @createTime 2020年05月10日 07:25:00
+ * @author yuchang
  */
 public class SocketServerMain {
     public static void main(String[] args) {
