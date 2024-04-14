@@ -180,7 +180,7 @@ public class HelloServiceImpl2 implements HelloService {
 /**
  * Server: Automatic registration service via @RpcService annotation
  *
- * @author shuang.kou
+ * @author yuchang
  * @createTime 2020年05月10日 07:25:00
  */
 @RpcScan(basePackage = {"com.yuchang.serviceimpl"})

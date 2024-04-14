@@ -7,7 +7,7 @@ import io.protostuff.Schema;
 import io.protostuff.runtime.RuntimeSchema;
 
 /**
- * @author TangMinXuan
+ * @author yuchang
  * @createTime 2020年11月09日 20:13
  */
 public class ProtostuffSerializer implements Serializer {

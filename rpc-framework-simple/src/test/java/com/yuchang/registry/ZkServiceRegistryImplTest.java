@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 /**
- * @author shuang.kou
+ * @author yuchang
  * @createTime 2020年05月31日 16:25:00
  */
 class ZkServiceRegistryImplTest {

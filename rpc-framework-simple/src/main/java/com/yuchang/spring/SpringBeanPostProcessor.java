@@ -21,7 +21,7 @@ import java.lang.reflect.Field;
 /**
  * call this method before creating the bean to see if the class is annotated
  *
- * @author shuang.kou
+ * @author yuchang
  * @createTime 2020年07月14日 16:42:00
  */
 @Slf4j

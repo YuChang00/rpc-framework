@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 /**
  * scan and filter specified annotations
  *
- * @author shuang.kou
+ * @author yuchang
  * @createTime 2020年08月10日 22:12:00
  */
 @Slf4j

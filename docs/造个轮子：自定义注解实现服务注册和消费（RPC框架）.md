@@ -82,7 +82,7 @@ import java.lang.annotation.Target;
 /**
  * RPC service annotation, marked on the service implementation class
  *
- * @author shuang.kou
+ * @author yuchang
  * @createTime 2020年07月21日 13:11:00
  */
 @Documented
@@ -124,7 +124,7 @@ import org.springframework.stereotype.Component;
 /**
  * call this method before creating the bean to see if the class is annotated
  *
- * @author shuang.kou
+ * @author yuchang
  * @createTime 2020年07月14日 16:42:00
  */
 @Component
