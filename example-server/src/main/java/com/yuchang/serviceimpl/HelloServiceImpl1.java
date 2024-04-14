@@ -10,10 +10,10 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 @RpcService(group = "test1", version = "version1")
-public class HelloServiceImpl implements HelloService {
+public class HelloServiceImpl1 implements HelloService {
 
     static {
-        System.out.println("HelloServiceImpl被创建");
+        System.out.println("HelloServiceImpl1被创建");
     }
 
     @Override

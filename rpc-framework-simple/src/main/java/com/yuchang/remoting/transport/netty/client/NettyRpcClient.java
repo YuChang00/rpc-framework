@@ -35,7 +35,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
 /**
- * initialize and close Bootstrap object
+ * 初始化并关闭 Bootstrap 对象
  *
  * @author yuchang
  */
@@ -48,20 +48,20 @@ public final class NettyRpcClient implements RpcRequestTransport {
     private final EventLoopGroup eventLoopGroup;
 
     public NettyRpcClient() {
-        // initialize resources such as EventLoopGroup, Bootstrap
+        // 初始化 EventLoopGroup、Bootstrap 等资源
         eventLoopGroup = new NioEventLoopGroup();
         bootstrap = new Bootstrap();
         bootstrap.group(eventLoopGroup)
                 .channel(NioSocketChannel.class)
                 .handler(new LoggingHandler(LogLevel.INFO))
-                //  The timeout period of the connection.
-                //  If this time is exceeded or the connection cannot be established, the connection fails.
+                //  连接的超时期限。
+                // 如果超过此时间或无法建立连接，则连接将失败。
                 .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 5000)
                 .handler(new ChannelInitializer<SocketChannel>() {
                     @Override
                     protected void initChannel(SocketChannel ch) {
                         ChannelPipeline p = ch.pipeline();
-                        // If no data is sent to the server within 15 seconds, a heartbeat request is sent
+                        //如果 15 秒内没有向服务器发送任何数据，则发送检测信号请求
                         p.addLast(new IdleStateHandler(0, 5, 0, TimeUnit.SECONDS));
                         p.addLast(new RpcMessageEncoder());
                         p.addLast(new RpcMessageDecoder());
@@ -74,7 +74,7 @@ public final class NettyRpcClient implements RpcRequestTransport {
     }
 
     /**
-     * connect server and get the channel ,so that you can send rpc message to server
+     * 连接服务器并获取通道，以便可以向服务器发送RPC消息
      *
      * @param inetSocketAddress server address
      * @return the channel
@@ -95,7 +95,7 @@ public final class NettyRpcClient implements RpcRequestTransport {
 
     @Override
     public Object sendRpcRequest(RpcRequest rpcRequest) {
-        // build return value
+        // 生成返回值
         CompletableFuture<RpcResponse<Object>> resultFuture = new CompletableFuture<>();
         // get server address
         InetSocketAddress inetSocketAddress = serviceDiscovery.lookupService(rpcRequest);
